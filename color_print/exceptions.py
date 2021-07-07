@@ -1,2 +1,0 @@
-class ColorPrintException(ImportError):
-    pass

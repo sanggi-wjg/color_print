@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name = 'ColorPrint',
+    name = 'colorful-Print',
     version = '0.0.1',
     url = 'https://github.com/sanggi-wjg/color_print.git',
     author = 'SangGi',

@@ -1,4 +1,4 @@
-from color_print import color
+from colorful_print import color
 
 color.black('Black')
 color.red('Red')
