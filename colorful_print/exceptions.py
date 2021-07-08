@@ -1,2 +1,2 @@
-class ColorPrintException(ImportError):
+class ColorPrintException(AttributeError):
     pass
