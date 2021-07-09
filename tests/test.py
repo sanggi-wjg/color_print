@@ -1,5 +1,4 @@
 from colorful_print import color
-from colorful_print.style import Style
 
 color.black('Black')
 color.red('Red')
@@ -10,6 +9,11 @@ color.magenta('Magenta')
 color.cyan('Cyan')
 color.white('White')
 
-print(' Abc')
-print(Style.BOLD, 'Abc', Style.END)
-print(Style.ITALIC, 'Abc', Style.END)
+print()
+color.red('Red')
+color.green('Green', bold = True)
+color.yellow('Yellow', bold = True, italic = True)
+color.blue('Blue', bold = True, italic = True, underline = True)
+color.magenta('Magenta', bold = True, italic = True, underline = True, strike_out = True)
+color.cyan('Cyan', bold = True, italic = True, underline = True, reverse = True)
+color.white('White', bold = True, italic = True, underline = True, strike_out = True, reverse = True)
