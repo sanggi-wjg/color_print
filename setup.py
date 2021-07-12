@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name = 'colorful-print',
-    version = '0.0.3',
+    version = '0.0.4',
     url = 'https://github.com/sanggi-wjg/color_print.git',
     author = 'SangGi',
     author_email = 'girr311@naver.com',
@@ -15,7 +15,10 @@ setup(
     classifiers = [
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
-        'Programming Language :: Python :: 3.8'
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9'
     ]
 )

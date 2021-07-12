@@ -23,7 +23,7 @@ class ColorString(object):
         print(string, sep = sep, end = end, file = file, flush = flush)
 
     def format(self, *args, **kwargs):
-        string = '{}{}{}'.format(getattr(Style, self.style.upper()), ' '.join(args), Style.END)
+        string = '{}{}{}'.format(getattr(Style, self.style.upper()), ' '.join(map(str, args)), Style.END)
 
         if kwargs.get('bold', False):
             string = '{}{}{}'.format(getattr(Style, 'BOLD'), string, Style.END)
