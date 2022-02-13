@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name = 'colorful-print',
-    version = '0.0.4',
+    version = '0.0.6',
     url = 'https://github.com/sanggi-wjg/color_print.git',
     author = 'SangGi',
     author_email = 'girr311@naver.com',

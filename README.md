@@ -3,7 +3,12 @@
 [![PyPI version](https://badge.fury.io/py/colorful_print.svg)](https://badge.fury.io/py/colorful_print)
 [![PyPI](https://img.shields.io/pypi/pyversions/colorful_print.svg)](https://pypi.python.org/pypi/colorful_print)
 
-Example
+## Install
+```shell script
+pip install colorful_print
+```
+
+## Example
 
 ![colorful example](tests/example.png)
 
@@ -19,7 +24,6 @@ color.magenta('Print Magenta')
 color.cyan('Print Cyan')
 color.white('Print White')
 
-print()
 color.red('Print Red')
 color.green('Print Bold Green', bold = True)
 color.yellow('Print Bold Italic Yellow', bold = True, italic = True)
@@ -36,19 +40,16 @@ def colorful_dispatcher(c: str, msg: str, *args, **kwargs):
     dispatch = getattr(color, c)
     dispatch(msg, *args, **kwargs)
 
-def _red(msg: str, *args, **kwargs):
+def red(msg: str, *args, **kwargs):
     colorful_dispatcher('red', msg, *args, **kwargs)
 
-def _yellow(msg: str, *args, **kwargs):
+def yellow(msg: str, *args, **kwargs):
     colorful_dispatcher('yellow', msg, *args, **kwargs)
 
-_red('123', 456, italic = True)
-_yellow('789', 123.456, italic = True, bold = True)
+red('123', 456, italic = True)
+yellow('789', 123.456, italic = True, bold = True)
 ```
 
 
-Usage
-```shell script
-pip install colorful_print
-```
+
 
