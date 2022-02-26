@@ -2,7 +2,7 @@
 
 [![PyPI version](https://badge.fury.io/py/colorful_print.svg)](https://badge.fury.io/py/colorful_print)
 [![PyPI](https://img.shields.io/pypi/pyversions/colorful_print.svg)](https://pypi.python.org/pypi/colorful_print)
-![PyPI](https://img.shields.io/pypi/dm/colorful-print.svg)
+[![PyPI](https://img.shields.io/pypi/dm/colorful-print.svg)](https://pypi.org/project/colorful-print/)
 
 ## Install
 ```shell script
