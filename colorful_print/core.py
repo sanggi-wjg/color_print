@@ -10,20 +10,18 @@ class ColorString(object):
         self.style = style
 
     def __call__(self, *args, **kwargs):
-        sep = kwargs.get('sep', ' ')
-        end = kwargs.get('end', '\n')
-        file = kwargs.get('file', sys.stdout)
-        flush = kwargs.get('flush', False)
-
         try:
             string = self.format(*args, **kwargs)
         except AttributeError:
             raise ColorPrintException('{} not exist'.format(self.style))
+        except Exception as e:
+            raise ColorPrintException(e)
 
-        print(string, sep = sep, end = end, file = file, flush = flush)
+        sys.stdout.write(string)
 
     def format(self, *args, **kwargs):
-        string = '{}{}{}'.format(getattr(Style, self.style.upper()), ' '.join(map(str, args)), Style.END)
+        seperator = kwargs.get('sep', ' ')
+        string = '{}{}{}'.format(getattr(Style, self.style.upper()), seperator.join(map(str, args)), Style.END)
 
         if kwargs.get('bold', False):
             string = '{}{}{}'.format(getattr(Style, 'BOLD'), string, Style.END)
@@ -39,6 +37,10 @@ class ColorString(object):
 
         if kwargs.get('reverse', False):
             string = '{}{}{}'.format(getattr(Style, 'REVERSE'), string, Style.END)
+
+        string = '{}{}'.format(string, kwargs.get('end', '\n'))
+        if kwargs.get('flush', False):
+            sys.stdout.flush()
 
         return string
 
