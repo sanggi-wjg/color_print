@@ -9,9 +9,9 @@ jobs:
   build-test:
     runs-on: ubuntu-latest
     strategy:
-#      max-parallel: 3
-      matrix:
-        python-version: [ "3.6","3.7","3.8","3.9","3.10","3.11" ]
+      #      max-parallel: 3
+      matrix: # https://raw.githubusercontent.com/actions/python-versions/main/versions-manifest.json
+        python-version: [ "3.7","3.8","3.9","3.10","3.11" ]
     steps:
       - uses: actions/checkout@v3
 
