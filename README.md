@@ -3,6 +3,7 @@
 [![✅Build And Test](https://github.com/sanggi-wjg/color_print/actions/workflows/build-test.yml/badge.svg?branch=main)](https://github.com/sanggi-wjg/color_print/actions/workflows/build-test.yml)
 [![PyPI version](https://badge.fury.io/py/colorful_print.svg)](https://badge.fury.io/py/colorful_print)
 [![PyPI](https://img.shields.io/pypi/pyversions/colorful_print.svg)](https://pypi.python.org/pypi/colorful_print)
+<br/>
 [![CodeFactor](https://www.codefactor.io/repository/github/sanggi-wjg/color_print/badge)](https://www.codefactor.io/repository/github/sanggi-wjg/color_print)
 [![PyPI](https://img.shields.io/pypi/dm/colorful-print.svg)](https://pypi.org/project/colorful-print/)
 
