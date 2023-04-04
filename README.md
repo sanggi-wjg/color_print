@@ -67,5 +67,7 @@ yellow('789', 123.456, italic=True, bold=True)
 ```
 
 
-
+## Ref
+* PyPi 배포 방법
+  * https://devocean.sk.com/blog/techBoardDetail.do?ID=163566
 
