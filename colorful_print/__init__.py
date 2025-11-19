@@ -1,10 +1,7 @@
-"""
+from .printer import ColorfulPrinter
 
+__version__ = "1.0.0"
 
-"""
+cp = ColorfulPrinter()
 
-from .core import ColorPrint
-
-__version__ = '0.1.0'
-
-color = ColorPrint()
+__all__ = ["ColorfulPrinter", "cp", "__version__"]

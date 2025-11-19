@@ -1,4 +1,4 @@
-# Color Print
+# Python Colorful Print
 
 [![✅Build And Test](https://github.com/sanggi-wjg/color_print/actions/workflows/build-test.yml/badge.svg?branch=main)](https://github.com/sanggi-wjg/color_print/actions/workflows/build-test.yml)
 [![PyPI version](https://badge.fury.io/py/colorful_print.svg)](https://badge.fury.io/py/colorful_print)
@@ -7,69 +7,73 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/sanggi-wjg/color_print/badge)](https://www.codefactor.io/repository/github/sanggi-wjg/color_print)
 [![PyPI](https://img.shields.io/pypi/dm/colorful-print.svg)](https://pypi.org/project/colorful-print/)
 
-
-![](.README_images/3aa23fd6.png)
-
+![](.images/s2da8d9.png)
 
 ## Install
-```shell script
+
+```shell
 pip install colorful_print
 ```
 
+## Usage
 
-## Usage 1
 ```python
 import sys
-from colorful_print import color
+from colorful_print import cp
 
-a = [1, 'a', 2.3]
-b = (4, 'b', 5.6)
+a = [1, "a", 2.345]
+b = (4, "b", 5.678)
+c = {"John": "Doe", "age": 20}
 
-color.black('Print Black', a, b)
-color.red('Print Red', a, b)
-color.green('Print Green', a, b)
-color.yellow('Print Yellow', a, b)
-color.blue('Print Blue', a, b)
-color.magenta('Print Magenta', a, b)
-color.cyan('Print Cyan', a, b)
-color.white('Print White', a, b)
+cp.black("This is Black", a, b, c)
+cp.bright_black("This is Bright Black", a, b, c)
+cp.red("This is Red", a, b, c)
+cp.bright_red("This is Bright Red", a, b, c)
+cp.green("This is Green", a, b, c)
+cp.bright_green("This is Bright Green", a, b, c)
+cp.yellow("This is Yellow", a, b, c)
+cp.yellow("This is Bright Yellow", a, b, c)
+cp.blue("This is Blue", a, b, c)
+cp.bright_blue("This is Bright Blue", a, b, c)
+cp.magenta("This is Magenta", a, b, c)
+cp.bright_magenta("This is Bright Magenta", a, b, c)
+cp.cyan("This is Cyan", a, b, c)
+cp.bright_cyan("This is Bright Cyan", a, b, c)
+cp.white("This is White", a, b, c)
+cp.bright_white("This is Bright White", a, b, c)
 sys.stdout.write("\n")
 
-color.red('Print Red', a, b)
-color.green('Print Bold Green', a, b, bold=True)
-color.yellow('Print Bold Italic Yellow', a, b, bold=True, italic=True)
-color.blue('Print Bold Italic Underline Blue', a, b, bold=True, italic=True, underline=True)
-color.magenta('Print Bold Italic Underline StrikeOut Magenta', a, b, bold=True, italic=True, underline=True, strike_out=True)
-color.cyan('Print Bold Italic Underline Reverse Cyan', a, b, bold=True, italic=True, underline=True, reverse=True)
-color.white('Print Bold Italic Underline StrikeOut Reverse White', a, b, bold=True, italic=True, underline=True, strike_out=True, reverse=True)
+cp.red("This is Red", a, b, c)
+cp.green("This is Bold Green", a, b, c, bold=True)
+cp.yellow("This is Bold Italic Yellow", a, b, c, bold=True, italic=True)
+cp.blue("This is Bold Italic Underline Blue", a, b, c, bold=True, italic=True, underline=True)
+cp.magenta(
+    "This is Bold Italic Underline StrikeOut Magenta",
+    a,
+    b,
+    c,
+    bold=True,
+    italic=True,
+    underline=True,
+    strike_out=True,
+)
+cp.cyan(
+    "This is Bold Italic Underline Reverse Cyan", a, b, c, bold=True, italic=True, underline=True, reverse=True
+)
+cp.white(
+    "This is Bold Italic Underline StrikeOut Reverse White",
+    a,
+    b,
+    c,
+    bold=True,
+    italic=True,
+    underline=True,
+    strike_out=True,
+    reverse=True,
+)
 sys.stdout.write("\n")
 
-color.black('Print Black', a, b, sep='\t\t', end='\n\n', flush=True)
-color.red('Print Red', a, b, sep='\t\t', end='\n\n', flush=True)
-color.green('Print Green', a, b, sep='\t\t', end='\n\n', flush=True)
+cp.black("This is Black", a, b, c, sep="\t\t", end="@@ \n\n", flush=True)
+cp.red("This is Red", a, b, c, sep="\t\t", end="@@ \n\n", flush=True)
+cp.green("This is Green", a, b, c, sep="\t\t", end="@@ \n\n", flush=True)
 ```
-
-
-## Usage 2
-```python
-from colorful_print import color
-
-def colorful_dispatcher(c: str, msg: str, *args, **kwargs):
-    dispatch = getattr(color, c)
-    dispatch(msg, *args, **kwargs)
-
-def red(msg: str, *args, **kwargs):
-    colorful_dispatcher('red', msg, *args, **kwargs)
-
-def yellow(msg: str, *args, **kwargs):
-    colorful_dispatcher('yellow', msg, *args, **kwargs)
-
-red('123', 456, italic=True)
-yellow('789', 123.456, italic=True, bold=True)
-```
-
-
-## Ref
-* PyPi 배포 방법
-  * https://devocean.sk.com/blog/techBoardDetail.do?ID=163566
-
