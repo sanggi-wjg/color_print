@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "colorful-print"
-version = "1.0.0"
+version = "1.1.0"
 description = "Can it be used to print in color."
 authors = ["SangGi <girr311@naver.com>"]
 readme = "README.md"
@@ -18,6 +18,7 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
 ]
 packages = [
     { include = "colorful_print" }
